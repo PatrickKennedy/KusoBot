@@ -1,0 +1,6 @@
+bot:
+  discord_token: DISCORD_TOKEN
+
+serices:
+  host: SERVICE_HOST
+  port: SERVICE_PORT

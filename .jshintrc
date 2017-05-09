@@ -1,0 +1,13 @@
+{
+  "esversion": 6,
+  "curly": true,
+  "immed": true,
+  "newcap": true,
+  "noarg": true,
+  "sub": true,
+  "boss": true,
+  "eqnull": true,
+  "laxcomma": true,
+  "-W070": false, // Trailing Semicolon
+  "-W116": false // Bracketless If-statements
+}

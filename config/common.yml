@@ -1,0 +1,7 @@
+bot:
+  discord_token: ~
+  announce_channel: general
+
+services:
+  host: localhost
+  port: 3000

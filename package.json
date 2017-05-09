@@ -1,0 +1,27 @@
+{
+  "name": "kuso-bot",
+  "version": "0.23.4",
+  "description": "A bot for the Kusogrande Discord channel",
+  "main": "index.js",
+  "author": "Patrick Kennedy <pakattack161@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.0.0",
+    "erlpack": "erlpack@hammerandchisel/erlpack#master",
+    "js-yaml": "^3.8.3",
+    "moment": "^2.18.1",
+    "moment-timezone": "^0.5.13",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0",
+    "uws": "^0.12.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.4"
+  },
+  "scripts": {
+    "lint": "jshint ./",
+    "start": "docker-compose up",
+    "build:js": "yarn run lint",
+    "build": "yarn run build:js && docker-compose build"
+  }
+}

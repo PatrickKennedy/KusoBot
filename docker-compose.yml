@@ -1,0 +1,10 @@
+version: '3'
+services:
+  bot:
+    build: ./
+    image: kuso-bot
+    
+networks:
+  default:
+    external:
+      name: kuso
