@@ -9,4 +9,5 @@ COPY package.json /usr/src/app/
 RUN npm install && npm cache clean
 COPY . /usr/src/app
 
-CMD [ "node", "index.js" ]
+ENTRYPOINT ["node"]
+CMD ["index.js"]
