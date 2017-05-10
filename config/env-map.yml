@@ -1,6 +1,6 @@
 bot:
   discord_token: DISCORD_TOKEN
 
-serices:
+services:
   host: SERVICES_HOST
   port: SERVICES_PORT
