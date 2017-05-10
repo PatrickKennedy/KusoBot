@@ -6,6 +6,7 @@
   "author": "Patrick Kennedy <pakattack161@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "assignment": "^2.2.1",
     "discord.js": "^11.0.0",
     "erlpack": "erlpack@hammerandchisel/erlpack#master",
     "js-yaml": "^3.8.3",

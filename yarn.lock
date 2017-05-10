@@ -31,6 +31,10 @@ assert-plus@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/assert-plus/-/assert-plus-0.2.0.tgz#d74e1b87e7affc0db8aadb7021f3fe48101ab234"
 
+assignment@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/assignment/-/assignment-2.2.1.tgz#359a7726b57e55c6b98052fa3a82f58f29052523"
+
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
