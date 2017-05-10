@@ -1,6 +1,6 @@
 {
   "name": "kuso-bot",
-  "version": "0.23.4",
+  "version": "1.0.0",
   "description": "A bot for the Kusogrande Discord channel",
   "main": "index.js",
   "author": "Patrick Kennedy <pakattack161@gmail.com>",
@@ -8,7 +8,7 @@
   "dependencies": {
     "assignment": "^2.2.1",
     "discord.js": "^11.0.0",
-    "erlpack": "erlpack@hammerandchisel/erlpack#master",
+    "erlpack": "github:hammerandchisel/erlpack",
     "js-yaml": "^3.8.3",
     "moment": "^2.18.1",
     "moment-timezone": "^0.5.13",
