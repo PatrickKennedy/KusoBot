@@ -31,6 +31,10 @@ assert-plus@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/assert-plus/-/assert-plus-0.2.0.tgz#d74e1b87e7affc0db8aadb7021f3fe48101ab234"
 
+assignment@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/assignment/-/assignment-2.2.1.tgz#359a7726b57e55c6b98052fa3a82f58f29052523"
+
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
@@ -199,9 +203,9 @@ entities@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.1.tgz#6e5c2d0a5621b5dadaecef80b90edfb5cd7772f0"
 
-erlpack@erlpack@hammerandchisel/erlpack#master:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/erlpack/-/erlpack-0.1.2.tgz#cf1f4f755d0728ebc2d11b2e3c92bd2da834514e"
+"erlpack@github:hammerandchisel/erlpack":
+  version "0.1.0"
+  resolved "https://codeload.github.com/hammerandchisel/erlpack/tar.gz/ad84c69355f03770a84d4bd8a20b981dd168fcf4"
   dependencies:
     bindings "^1.2.1"
     nan "^2.1.0"
@@ -633,7 +637,7 @@ uuid@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
 
-uws:
+uws@^0.14.1:
   version "0.14.1"
   resolved "https://registry.yarnpkg.com/uws/-/uws-0.14.1.tgz#89b8eb7bced272c65621472e878c57f4e0e00640"
 
