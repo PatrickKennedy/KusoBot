@@ -1,6 +1,11 @@
 bot:
   discord_token: ~
   announce_channel: general
+  plugins:
+    - discord
+    - schedule
+    - utils
+    - ping
 
 services:
   host: localhost
