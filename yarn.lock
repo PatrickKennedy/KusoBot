@@ -397,10 +397,6 @@ moment-timezone@^0.5.13:
   version "2.18.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
 
-morty@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/morty/-/morty-0.0.2.tgz#5b908ffa18ce5688b1d8d2bfad4769925e484b9e"
-
 nan@^2.1.0:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.6.2.tgz#e4ff34e6c95fdfb5aecc08de6596f43605a7db45"
