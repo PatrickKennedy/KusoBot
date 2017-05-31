@@ -15,6 +15,10 @@ module.exports = class extends require('morty').Plugin {
     this.emit('loaded', this);
   }
 
+  __build_game_msg(race) {
+    return race.game ? `${race.game} [${race.platform}]` : race.platform ? `a ${race.platform} game` : 'a mystery game';
+  }
+
   cmd_next(message, args) {
     let options = {
       method: 'GET',
@@ -37,7 +41,7 @@ module.exports = class extends require('morty').Plugin {
 
         let race_start = moment.utc(race.start_time).tz('America/New_York')
           , diff = race_start.fromNow(true)
-          , game = race.game ? `${race.game} [${race.platform}]` : `a ${race.platform} game`
+          , game = this.__build_game_msg(race)
           , racer_1 = race.racer_1.replace('\n', ' ')
           , racer_2 = race.racer_2.replace('\n', ' ')
           , messages = []
@@ -76,7 +80,7 @@ module.exports = class extends require('morty').Plugin {
         messages.push('```markdown');
         last_event.races.forEach((race, index) => {
           let race_start = moment.utc(race.start_time).tz('America/New_York')
-            , game = race.game ? `${race.game} [${race.platform}]` : `a ${race.platform} game`
+            , game = this.__build_game_msg(race)
             , racer_1 = race.racer_1.replace('\n', ' ')
             , racer_2 = race.racer_2.replace('\n', ' ')
             ;
@@ -106,7 +110,7 @@ module.exports = class extends require('morty').Plugin {
         //messages.push(`Vods Available at <https://www.twitch.tv/brossentia/videos/highlights>`);
         messages.push('```markdown');
         last_event.races.forEach((race, index) => {
-          let game = race.game ? `${race.game} [${race.platform}]` : `a ${race.platform} game`
+          let game = this.__build_game_msg(race)
             , racer_1 = (race.racer_1.includes(race.winner) ? `${race.winner}👑` : race.racer_1).replace('\n', ' ')
             , racer_2 = (race.racer_2.includes(race.winner) ? `${race.winner}💎` : race.racer_2).replace('\n', ' ')
             ;
