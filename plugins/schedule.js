@@ -65,7 +65,7 @@ module.exports = class extends require('morty').Plugin {
           return;
         }
 
-        let last_event = data[data.length - 1]
+        let last_event = data[0]
           , event_date = moment(data[0].date)
           , diff = event_date.fromNow(true)
           , messages = []
