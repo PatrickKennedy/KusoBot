@@ -15,6 +15,7 @@
     {
       "type": "node",
       "request": "launch",
+      "protocol": "inspector",
       "name": "Launch Program",
       "program": "${workspaceRoot}\\index.js"
     },
