@@ -69,16 +69,19 @@ module.exports = class extends require('morty').Plugin {
           return;
         }
 
-        let last_event = data[0]
-          , event_date = moment(data[0].date)
-          , diff = event_date.fromNow(true)
+        let next_event = data[0]
+          // use the first race as the start time for the event to avoid cases
+          // where !next and !upcoming have different days near the end of a day
+          , first_race = (next_event && next_event.races[0])
+          , first_race_time = moment(first_race ? first_race.start_time : next_event.date)
+          , diff = first_race_time.fromNow(true)
           , messages = []
           ;
 
-        messages.push(`Next Kusogrande Event in ${diff} this ${event_date.format('dddd')}`);
+        messages.push(`Next Kusogrande Event in ${diff} this ${first_race_time.format('dddd')}`);
         //message.channel.send(`Current Time: ${moment.tz('America/New_York').format('hh:mma z')}`);
         messages.push('```markdown');
-        last_event.races.forEach((race, index) => {
+        next_event.races.forEach((race, index) => {
           let race_start = moment.utc(race.start_time).tz('America/New_York')
             , game = this.__build_game_msg(race)
             , racer_1 = race.racer_1.replace('\n', ' ')
