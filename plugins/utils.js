@@ -13,7 +13,7 @@ module.exports = class extends require('morty').Plugin {
     msg.channel.send(`https://discordapp.com/oauth2/authorize?client_id=${this.owner.user.id}&scope=bot&permissions=0`);
   }
 
-  cmd_addme(msg) {
+  cmd_kill(msg) {
     msg.author.send(':(');
     this.owner.destroy();
   }
