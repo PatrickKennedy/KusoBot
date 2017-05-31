@@ -24,7 +24,10 @@ module.exports = class Discord extends require('morty').Plugin {
     console.log(`I'm a part of these guilds:`);
     bot.guilds.forEach((guild) => {
       console.log(guild.name);
-      guild.channels.find('name', config.bot.announce_channel).send('I liiiiive! Fear me!');
+      // [
+      //   'Hello. I am, KusoBot. Your personal Kuso companion. I was alerted to the need for kusoge attention when you said "oh no". On a scale from 1-10 how would you rate your pain?',
+      //   'Use !help to see available commands (WIP)! Or just get started with !upcoming and !past.'
+      // ].map((msg) => { guild.channels.find('name', config.bot.announce_channel).send(msg); })
     });
   }
 
@@ -32,7 +35,10 @@ module.exports = class Discord extends require('morty').Plugin {
     console.log('createGuild event');
     if (!guild.available)
       console.log(`${guild.name} is unavailable`);
-    guild.channels.find('name', config.bot.announce_channel).send('I liiiiive! Fear me!');
+    [
+      'Hello. I am, KusoBot. Your personal Kuso companion. I was alerted to the need for kusoge attention when you said "oh no". On a scale from 1-10 how would you rate your pain?',
+      'Use !help to see available commands (WIP)! Or just get started with !upcoming and !past.'
+    ].map((msg) => { guild.channels.find('name', config.bot.announce_channel).send(msg); })
   }
 
   /**
