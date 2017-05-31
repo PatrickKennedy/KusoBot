@@ -24,14 +24,14 @@ module.exports = class extends require('morty').Plugin {
     rp(options)
       .then((data) => {
         if (!data.length || !data[0].races.length) {
-          message.channel.sendMessage('No events currently scheduled')
+          message.channel.send('No events currently scheduled')
           return;
         }
 
         // load the next future race if one exists
         let race = data[0].races.find((race) => { return moment.utc(race.start_time).isAfter(moment.utc()); });
         if (typeof race === "undefined") {
-          message.channel.sendMessage('No races left today :(');
+          message.channel.send('No races left today :(');
           return;
         }
 
@@ -43,11 +43,11 @@ module.exports = class extends require('morty').Plugin {
           , messages = []
           ;
 
-        message.channel.sendMessage(`Next Kusogrande Race in ${diff}`);
+        messages.push(`Next Kusogrande Race in ${diff}`);
         messages.push('```markdown');
         messages.push(`* ${racer_1} -vs- ${racer_2}\n    Racing: ${game}\n    At:     ${race_start.format('hh:mma z')}\n`);
         messages.push('```');
-        message.channel.sendMessage(messages.join('\n'));
+        message.channel.send(messages.join('\n'));
       });
   }
 
@@ -61,7 +61,7 @@ module.exports = class extends require('morty').Plugin {
     rp(options)
       .then((data) => {
         if (!data.length || !data[0].races.length) {
-          message.channel.sendMessage('No events currently scheduled')
+          message.channel.send('No events currently scheduled')
           return;
         }
 
@@ -71,8 +71,8 @@ module.exports = class extends require('morty').Plugin {
           , messages = []
           ;
 
-        message.channel.sendMessage(`Next Kusogrande Event in ${diff} this ${event_date.format('dddd')}`);
-        //message.channel.sendMessage(`Current Time: ${moment.tz('America/New_York').format('hh:mma z')}`);
+        messages.push(`Next Kusogrande Event in ${diff} this ${event_date.format('dddd')}`);
+        //message.channel.send(`Current Time: ${moment.tz('America/New_York').format('hh:mma z')}`);
         messages.push('```markdown');
         last_event.races.forEach((race, index) => {
           let race_start = moment.utc(race.start_time).tz('America/New_York')
@@ -83,7 +83,7 @@ module.exports = class extends require('morty').Plugin {
           messages.push(`* ${racer_1} -vs- ${racer_2}\n    Racing: ${game}\n    At:     ${race_start.format('hh:mma z')}\n`);
         });
         messages.push('```');
-        message.channel.sendMessage(messages.join('\n'));
+        message.channel.send(messages.join('\n'));
       });
   }
 
@@ -113,7 +113,7 @@ module.exports = class extends require('morty').Plugin {
           messages.push(`* ${racer_1} -vs- ${racer_2}\n    Raced: ${game}\n    Vod:   ${race.vod.replace('https://', '')}\n`);
         });
         messages.push('```');
-        message.channel.sendMessage(messages.join('\n'));
+        message.channel.send(messages.join('\n'));
       });
   }
 
